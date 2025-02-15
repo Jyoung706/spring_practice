@@ -1,0 +1,10 @@
+services:
+  h2:
+    image: oscarfonts/h2
+    ports:
+      - "1521:1521"
+      - "8081:81"
+    environment:
+      - H2_OPTIONS=-ifNotExists
+    volumes:
+      - ./h2-data:/h2-data
